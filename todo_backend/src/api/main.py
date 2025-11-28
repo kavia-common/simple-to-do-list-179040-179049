@@ -24,7 +24,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # Permissive for preview/integration. In production, scope to your frontend origin.
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
